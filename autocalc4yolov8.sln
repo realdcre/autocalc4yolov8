@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autocalc4yolov8", "autocalc4yolov8\autocalc4yolov8.csproj", "{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		v1.0 stable|Any CPU = v1.0 stable|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.v1.0 stable|Any CPU.ActiveCfg = v1.0 stable|Any CPU
+		{53CC025E-F7FA-4FE5-B1D4-DBB493CA584E}.v1.0 stable|Any CPU.Build.0 = v1.0 stable|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {135B8FB7-FC88-4CD5-A618-1FE1978C0269}
+	EndGlobalSection
+EndGlobal
