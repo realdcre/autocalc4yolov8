@@ -1,11 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
 
+string filePath = "output.csv";
+/// this initializes the program
 
-    /// this initializes the program
 
-
-    const int imgwidth = 5472;
-const int imgheight = 3648;
 
 bool loop = true;
 void init()
@@ -13,7 +11,7 @@ void init()
     using (StreamWriter writer = new StreamWriter(filePath, append: true))
     {
 
-        writer.WriteLine($"{"width"},{"height"},{"startvalueX"},{"startvalueY"},{DateTime.Now.ToString()},{DateTime.Now.ToString("HH:mm:ss")}");
+        writer.WriteLine($"{"width"},{"height"},{"startvalueX"},{"startvalueY"},{"itemnr"},{DateTime.Now.ToString()},{DateTime.Now.ToString("HH:mm:ss")}");
     }
     Console.WriteLine("Program initialized");
 }
@@ -73,15 +71,16 @@ double divide(int x, int divisionfactor)
     return result;
 }
 
-string filePath = "output.csv";
+
 init();
 while (loop == true)
 {
-    Console.WriteLine("Input data:  width, height, start value x, start value y");
+    Console.WriteLine("Input data:  width, height, start value x, start value y, img number");
     int width = inputWidth();
     int height = inputHeight();
     int sX = inputStartX();
     int sY = inputStartY();
+    int imgnr = Console.ReadLine()
     Console.WriteLine(calculateCenterX(width, sX));
     Console.WriteLine(calculateCenterY(height, sY));
     Console.WriteLine(divide(width, 5472));
@@ -93,7 +92,7 @@ while (loop == true)
     {
 
         // Write variables to the file
-        writer.WriteLine($"{width},{height},{sX},{sY},{calculateCenterX(width, sX)},{calculateCenterY(height, sY)},{divide(width, 5472)},{divide(height, 3648)}");
+        writer.WriteLine($"{width},{height},{sX},{sY},{calculateCenterX(width, sX)},{calculateCenterY(height, sY)},{divide(width, 5472)},{divide(height, 3648)},{imgnr}");
     }
 
     Console.WriteLine("press n to exit");
