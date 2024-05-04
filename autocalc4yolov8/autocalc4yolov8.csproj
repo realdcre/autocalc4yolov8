@@ -5,7 +5,7 @@
     <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Configurations>Debug;Release;v1.0 stable</Configurations>
+    <Configurations>Debug;Release;v1.0 stable;v1.1 Stable</Configurations>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <ApplicationIcon>Untitled.ico</ApplicationIcon>
     <SignAssembly>False</SignAssembly>
@@ -13,6 +13,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='v1.0 stable|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='v1.1 Stable|AnyCPU'">
     <Optimize>True</Optimize>
   </PropertyGroup>
 

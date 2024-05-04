@@ -11,7 +11,7 @@ void init()
     using (StreamWriter writer = new StreamWriter(filePath, append: true))
     {
 
-        writer.WriteLine($"{"width"},{"height"},{"startvalueX"},{"startvalueY"},{"itemnr"},{DateTime.Now.ToString()},{DateTime.Now.ToString("HH:mm:ss")}");
+        writer.WriteLine($"{"width"},{"height"},{"startvalueX"},{"startvalueY"},{"centerX"},{"centerY"},{"%width"},{"%height"},{"itemnr"},{"dataset-id"},{DateTime.Now.ToString()},{DateTime.Now.ToString("HH:mm:ss")}");
     }
     Console.WriteLine("Program initialized");
 }
@@ -75,12 +75,13 @@ double divide(int x, int divisionfactor)
 init();
 while (loop == true)
 {
-    Console.WriteLine("Input data:  width, height, start value x, start value y, img number");
+    Console.WriteLine("Input data:  width, height, start value x, start value y, img number, dataset-id");
     int width = inputWidth();
     int height = inputHeight();
     int sX = inputStartX();
     int sY = inputStartY();
-    int imgnr = Console.ReadLine()
+    int imgnr = Convert.ToInt32(Console.ReadLine());
+    int dsetid = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine(calculateCenterX(width, sX));
     Console.WriteLine(calculateCenterY(height, sY));
     Console.WriteLine(divide(width, 5472));
@@ -92,7 +93,7 @@ while (loop == true)
     {
 
         // Write variables to the file
-        writer.WriteLine($"{width},{height},{sX},{sY},{calculateCenterX(width, sX)},{calculateCenterY(height, sY)},{divide(width, 5472)},{divide(height, 3648)},{imgnr}");
+        writer.WriteLine($"{width},{height},{sX},{sY},{calculateCenterX(width, sX)},{calculateCenterY(height, sY)},{divide(width, 5472)},{divide(height, 3648)},{imgnr},{dsetid}");
     }
 
     Console.WriteLine("press n to exit");
